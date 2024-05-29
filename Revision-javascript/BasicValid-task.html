@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasicValid-task</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return ValidData()">
+        <table border="1" align="center">
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="pwd" id="pwd">
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>
+                    <input type="text" name="mobile" id="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="" value="submit">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
+<script>
+    function ValidData() 
+    {
+        var name = document.getElementById('name').value; 
+        if (name=="") {
+            alert('Please Enter Name!')
+            document.getElementById('name').focus; 
+            return false; 
+        }
+
+        var email = document.getElementById('email').value; 
+        if (email=="") {
+            alert('Please Enter Email!'); 
+            document.getElementById('email').focus; 
+            return false; 
+        }
+
+        var pwd = document.getElementById('pwd').value; 
+        if (pwd=="") {
+            alert('Please Enter Password !'); 
+            document.getElementById('pwd').focus; 
+            return false; 
+        }
+
+        var mobile = document.getElementById('mobile').value; 
+        if (mobile=="") {
+            alert('Please Enter Mobile No.!')
+        }
+
+
+
+    }
+</script>
